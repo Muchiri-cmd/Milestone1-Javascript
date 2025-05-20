@@ -94,12 +94,21 @@ function perimeter(letter, num) {
 }
 
 // Challenge 11: Sum of Even Numbers
-function sumEvenNumbers(num){
+function sumEvenNumbers(n){
   let sum = 0;
-  for (let i = 2; i <= num; i += 2) {
+  for (let i = 2; i <= n; i += 2) {
     sum += i;
   }
   return sum;
+}
+
+// Challenge 12: Multiply by itself
+function powerUp(num,time){
+  let result = 1;
+  for (let i = 0; i < time; i++) {
+    result *= num;
+  }
+  return result;
 }
 
 
@@ -150,4 +159,10 @@ console.log("Sum of Even Numbers");
 console.log(sumEvenNumbers(6)); //12 (2+4+6)
 console.log(sumEvenNumbers(10)); //30 (2+4+6+8+10)
 console.log(sumEvenNumbers(5)); //6 (2+4)
+
+console.log("Multiply by itself");
+console.log(powerUp(2, 3)); //8 (2*2*2)
+console.log(powerUp(5, 0)); // 1 (anyhing to the zero power is 1)
+console.log(powerUp(3, 4)); //81 (3*3*3*3)
+console.log(powerUp(0)); //1
 
