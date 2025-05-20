@@ -82,6 +82,16 @@ function fizzBuzzCheck(number){
   }
 }
 
+function perimeter(letter, num) {
+  if (letter === "s") {
+    return 4 * num; 
+  } else if (letter === "c") {
+    return (6.28 * num); 
+  } else {
+    return "Invalid input";
+  }
+}
+
 //Test cases
 console.log("Addition of two numbers");
 console.log(addition(3,5)); //8
@@ -115,9 +125,12 @@ console.log(calculateBMI(85, 1.8)); // Your BMI is 26.2 - Overweight
 console.log('Greeting Based on Time');
 console.log(greetUser("Alice", 10)); //Good morning, Alice!
 
-
+console.log("FizzBuzz Check")
 console.log(fizzBuzzCheck(3)); //Fizz
 console.log(fizzBuzzCheck(10)); //Buzz
 console.log(fizzBuzzCheck(15)); //FizzBuzz
-
 console.log(fizzBuzzCheck(7)); //7
+
+console.log("Perimeter of Shapes");
+console.log(perimeter("s", 7)); //28
+console.log(perimeter("c", 4)); //25.12
