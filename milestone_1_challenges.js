@@ -135,6 +135,11 @@ function sumMultiples(n,divisor){
   return sum;
 }
 
+// Challenge 15: Sum of Digits
+function sumDigits(num) {
+ 
+}
+
 //Test cases
 console.log("Addition of two numbers");
 console.log(addition(3,5)); //8
