@@ -111,6 +111,19 @@ function powerUp(num,time){
   return result;
 }
 
+//challenge 13: Factorial Calculator
+function factorial(n){
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+      result *= i;
+    }
+    return result;
+  }
+}
+
 
 //Test cases
 console.log("Addition of two numbers");
@@ -166,3 +179,8 @@ console.log(powerUp(5, 0)); // 1 (anyhing to the zero power is 1)
 console.log(powerUp(3, 4)); //81 (3*3*3*3)
 console.log(powerUp(0)); //1
 
+
+console.log("Factorial Calculator");
+console.log(factorial(0)); //1
+console.log(factorial(4)); //24 (1*2*3*4)
+console.log(factorial(6)); //720 (1*2*3*4*5*6)
