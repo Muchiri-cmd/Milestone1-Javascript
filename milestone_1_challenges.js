@@ -82,6 +82,7 @@ function fizzBuzzCheck(number){
   }
 }
 
+//Challenge 10: Perimeter 2
 function perimeter(letter, num) {
   if (letter === "s") {
     return 4 * num; 
@@ -91,6 +92,16 @@ function perimeter(letter, num) {
     return "Invalid input";
   }
 }
+
+// Challenge 11: Sum of Even Numbers
+function sumEvenNumbers(num){
+  let sum = 0;
+  for (let i = 2; i <= num; i += 2) {
+    sum += i;
+  }
+  return sum;
+}
+
 
 //Test cases
 console.log("Addition of two numbers");
@@ -134,3 +145,9 @@ console.log(fizzBuzzCheck(7)); //7
 console.log("Perimeter of Shapes");
 console.log(perimeter("s", 7)); //28
 console.log(perimeter("c", 4)); //25.12
+
+console.log("Sum of Even Numbers");
+console.log(sumEvenNumbers(6)); //12 (2+4+6)
+console.log(sumEvenNumbers(10)); //30 (2+4+6+8+10)
+console.log(sumEvenNumbers(5)); //6 (2+4)
+
