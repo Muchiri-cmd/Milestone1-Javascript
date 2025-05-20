@@ -21,6 +21,14 @@ function isNegative(num){
     return false;
   }
 }
+// Challenge 5: Can I Drive
+function canDrive(name,age){
+  if(age >= 18){
+    return `${name} is old enough to drive`;
+  } else {
+    return `${name} is not old enough to drive yet`;
+  }
+}
 
 //Test cases
 console.log("Addition of two numbers");
@@ -39,3 +47,6 @@ console.log("Check Negative");
 console.log(isNegative(-23)); //true
 console.log(isNegative(55)); //false
 
+console.log("Can I Drive");
+console.log(canDrive("Jane", 22)); //Jane is old enough to drive
+console.log(canDrive("June",12)); //June is not old enough to drive yet
