@@ -55,6 +55,19 @@ function calculateBMI(weight, height) {
   }
 }
 
+//Challenge 8: Greeting Based on Time
+function greetUser(name,hour){
+  if(hour >= 5 && hour <= 11){
+    return `Good morning, ${name}!`;
+  } else if(hour >= 12 && hour <= 17){
+    return `Good afternoon, ${name}!`;
+  } else if(hour >= 18 && hour <= 21){
+    return `Good evening, ${name}!`;
+  } else {
+    return `Good night, ${name}!`;
+  }
+}
+
 //Test cases
 console.log("Addition of two numbers");
 console.log(addition(3,5)); //8
@@ -84,3 +97,6 @@ console.log(findLargest(-1,-5,-3)); //-1
 console.log("BMI Calculator");
 console.log(calculateBMI(68, 1.75)); //Your BMI is 22.2 - Normal weight
 console.log(calculateBMI(85, 1.8)); // Your BMI is 26.2 - Overweight
+
+console.log('Greeting Based on Time');
+console.log(greetUser("Alice", 10)); //Good morning, Alice!
