@@ -68,6 +68,20 @@ function greetUser(name,hour){
   }
 }
 
+// Challenge 9: FizzBuzz
+function fizzBuzzCheck(number){
+  // Check first if the number is divisible by 3 and 5 
+  if (number % 3 === 0 && number % 5 === 0) {
+    return "FizzBuzz";
+  } else if (number % 3 === 0) {
+    return "Fizz";
+  } else if (number % 5 === 0) {
+    return "Buzz";
+  } else {
+    return number;
+  }
+}
+
 //Test cases
 console.log("Addition of two numbers");
 console.log(addition(3,5)); //8
@@ -100,3 +114,10 @@ console.log(calculateBMI(85, 1.8)); // Your BMI is 26.2 - Overweight
 
 console.log('Greeting Based on Time');
 console.log(greetUser("Alice", 10)); //Good morning, Alice!
+
+
+console.log(fizzBuzzCheck(3)); //Fizz
+console.log(fizzBuzzCheck(10)); //Buzz
+console.log(fizzBuzzCheck(15)); //FizzBuzz
+
+console.log(fizzBuzzCheck(7)); //7
