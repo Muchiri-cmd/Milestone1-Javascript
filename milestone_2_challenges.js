@@ -33,6 +33,29 @@ function findWinner(arr){
   return winner;
 }
 
+// Challenge4: Longest Word
+function findLongestWord(arr){
+  let longestWord = "";
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > longestWord.length) {
+      longestWord = arr[i];
+    }
+  }
+  return longestWord;
+}
+
+//Challenge5: Count Properties
+function countProperties(obj) {
+  let properties = 0;
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      properties++;
+    }
+  }
+  return properties;
+}
+
+//
 //Test cases
 console.log("Sum of Positives");
 console.log(sumofPositives([1, -3, 5, -2, 9, -8])); //15
@@ -46,3 +69,11 @@ console.log(findWinner([
   { candidate: "Bob", votes: 75 },
   { candidate: "Charlie", votes: 65 }
 ])); //returns { candidate: "Bob", votes: 75 }
+
+console.log("Longest Word");
+console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"]));
+// returns: "grapefruit")
+
+console.log("Count Properties");
+console.log(countProperties({ name: "Alice", age: 25, city: "Paris" }));
+// returns: 3
