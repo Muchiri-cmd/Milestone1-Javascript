@@ -96,31 +96,27 @@ function perimeter(letter, num) {
 // Challenge 11: Sum of Even Numbers
 function sumEvenNumbers(n) {
   let sum = 0;
-  for (let i = 2; i <= n; i += 2) {
+  for (let i = 0; i <= n; i += 2) {
     sum += i;
   }
   return sum;
 }
 
 // Challenge 12: Multiply by itself
-function powerUp(num, time) {
+function powerUp(num, times) {
   let result = 1;
-  for (let i = 0; i < time; i++) {
-    result *= num;
+  for (let i = 0; i < times; i += 1) {
+    result = result * num
   }
   return result;
 }
 
-//challenge 13: Factorial Calculator
+//challenge 13: Factorial Calculator - Recursion
 function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
   } else {
-    let result = 1;
-    for (let i = 2; i <= n; i++) {
-      result *= i;
-    }
-    return result;
+    return n * factorial(n - 1);
   }
 }
 
