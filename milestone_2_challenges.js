@@ -95,6 +95,17 @@ function differenceEvenOdd(arr) {
   return difference;
 }
 
+//Challenge 9: Count Truthy
+function countTruthy(obj){
+  let truthCount = 0;
+  for (let key in obj) {
+    if (obj[key]) { // Check if the value is truthy
+      truthCount++;
+    }
+  }
+  return truthCount;
+}
+
 //Test cases
 console.log("Sum of Positives");
 console.log(sumofPositives([1, -3, 5, -2, 9, -8])); //15
@@ -127,3 +138,7 @@ console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6])); //returns: 12 //because 2+4+6  
 console.log("Difference between Sum of Even and Odd numbers");
 console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
 // returns: 3  // (2 + 4 + 6) - (1 + 3 + 5) = 12 - 9 = 3)
+
+console.log("Count Truthy");
+console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }));
+// returns: 2  // "hello" and 42 are truthy)
