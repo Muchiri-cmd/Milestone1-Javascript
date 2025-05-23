@@ -148,6 +148,17 @@ function linearSearchAll(arr,value){
   return indices;
 }
 
+//Challenge 14: Count Occurrences
+function countOccurences(array){
+  return array.reduce((obj, item) => {
+    if (!obj[item]) {
+      obj[item] = 1;
+    }
+    else obj[item]++;
+    return obj;
+  }, {});
+}
+
 //Test cases
 console.log("Sum of Positives");
 console.log(sumofPositives([1, -3, 5, -2, 9, -8])); //15
@@ -202,3 +213,7 @@ console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10)); // returns: -1
 console.log("Linear Search All Indices")
 console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7));  // returns: [2, 5])
 console.log(linearSearchAll([5, 3, 7, 1, 4], 10));    // returns: [])
+
+console.log("Count Occurences");
+console.log(countOccurences(["apple", "banana", "apple", "orange", "banana", "apple"]));
+// returns: { apple: 3, banana: 2, orange: 1 })
