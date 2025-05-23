@@ -120,9 +120,9 @@ function average(arr) {
 }
 
 //Challenge 11: Lineear Search
-function linearSearch(arr,value){
-  for(let i=0;i<arr.length;i++){
-    if(arr[i]===value){
+function linearSearch(arr, value) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === value) {
       return i;
     }
   }
@@ -130,18 +130,18 @@ function linearSearch(arr,value){
 }
 
 //Challenge 12: Reverse Linear Search
-function reverseLinearSearch(arr,value){
-  for (let i = arr.length - 1;i >= 0; i--){
-    if (arr[i]== value) return i;
+function reverseLinearSearch(arr, value) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] == value) return i;
   }
   return -1;
 }
 
 // Challenge 13: Linear Search All Indices
-function linearSearchAll(arr,value){
+function linearSearchAll(arr, value) {
   let indices = []
-  for(let i = 0 ; i< arr.length; i++){
-    if (arr[i] == value){
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == value) {
       indices.push(i);
     }
   }
@@ -149,7 +149,7 @@ function linearSearchAll(arr,value){
 }
 
 //Challenge 14: Count Occurrences
-function countOccurences(array){
+function countOccurences(array) {
   return array.reduce((obj, item) => {
     if (!obj[item]) {
       obj[item] = 1;
@@ -160,10 +160,10 @@ function countOccurences(array){
 }
 
 //Challenge 15: Remove Duplicates
-function removeDuplicates(arr){
+function removeDuplicates(arr) {
   let newArr = []
-  for (let i = 0; i < arr.length ; i++){
-    if (! newArr.includes( arr[i])){
+  for (let i = 0; i < arr.length; i++) {
+    if (!newArr.includes(arr[i])) {
       newArr.push(arr[i])
     }
   }
@@ -171,12 +171,12 @@ function removeDuplicates(arr){
 }
 
 // Challenge 16: Most Frequent 
-function mostFrequent(arr){
+function mostFrequent(arr) {
   const counts = {}
   let maxCount = 0;
   let result = arr[0];
 
-  for (const item of arr){
+  for (const item of arr) {
     counts[item] = (counts[item] || 0) + 1;
     if (counts[item] > maxCount) {
       maxCount = counts[item];
