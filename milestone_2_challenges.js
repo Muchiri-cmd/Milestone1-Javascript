@@ -21,10 +21,10 @@ function findMax(arr) {
 }
 
 // Challenge 3: Election Winner
-function findWinner(arr){
+function findWinner(arr) {
   let maxVotes = 0;
-  let winner= {};
-  for (let i = 0 ; i < arr.length; i++) {
+  let winner = {};
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i].votes > maxVotes) {
       maxVotes = arr[i].votes;
       winner = arr[i];
@@ -34,7 +34,7 @@ function findWinner(arr){
 }
 
 // Challenge4: Longest Word
-function findLongestWord(arr){
+function findLongestWord(arr) {
   let longestWord = "";
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].length > longestWord.length) {
@@ -56,7 +56,7 @@ function countProperties(obj) {
 }
 
 // Challenge 6: FIlter By Length
-function filterByLength(arr,minLength){
+function filterByLength(arr, minLength) {
   let filteredArray = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].length >= minLength) {
@@ -71,21 +71,19 @@ function filterByLength(arr,minLength){
 function sumEvenNumbers(arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) { 
+    if (arr[i] % 2 === 0) {
       sum += arr[i];
     }
   }
   return sum;
 }
 
-
-
 // Challenge 8: DIfference between Sum of Even and Odd  numbers
 function differenceEvenOdd(arr) {
   let sumEvenNumbers = 0;
   let sumOddNumbers = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) { 
+    if (arr[i] % 2 === 0) {
       sumEvenNumbers += arr[i];
     } else {
       sumOddNumbers += arr[i];
@@ -96,7 +94,7 @@ function differenceEvenOdd(arr) {
 }
 
 //Challenge 9: Count Truthy
-function countTruthy(obj){
+function countTruthy(obj) {
   let truthCount = 0;
   for (let key in obj) {
     if (obj[key]) { // Check if the value is truthy
@@ -107,18 +105,28 @@ function countTruthy(obj){
 }
 
 //Challenge 10: Average of Numbers
-function average(arr){
+function average(arr) {
   let total = 0;
   if (arr.length === 0) {
     return 0;
-  } else{
-     for (let i = 0; i < arr.length; i++) {
-        total += arr[i];
-      }
-      let avg = total / arr.length;
-      return avg;
+  } else {
+    for (let i = 0; i < arr.length; i++) {
+      total += arr[i];
+    }
+    let avg = total / arr.length;
+    return avg;
   }
- 
+
+}
+
+//Challenge 11: Lineear Search
+function linearSearch(arr,value){
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]===value){
+      return i;
+    }
+  }
+  return -1;
 }
 
 //Test cases
@@ -162,4 +170,8 @@ console.log("Average of Numbers");
 console.log(average([2, 4, 6, 8]));
 // returns: 5)
 console.log(average([]));
-  // returns: 0)
+// returns: 0)
+
+console.log("Linear Search");
+console.log(linearSearch([5, 3, 7, 1, 4, 7], 7));  // returns: 5)
+console.log(linearSearch([5, 3, 7, 1, 4], 10));    // returns: -1)
