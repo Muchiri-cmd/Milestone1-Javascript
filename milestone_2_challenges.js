@@ -170,6 +170,23 @@ function removeDuplicates(arr){
   return newArr;
 }
 
+// Challenge 16: Most Frequent 
+function mostFrequent(arr){
+  const counts = {}
+  let maxCount = 0;
+  let result = arr[0];
+
+  for (const item of arr){
+    counts[item] = (counts[item] || 0) + 1;
+    if (counts[item] > maxCount) {
+      maxCount = counts[item];
+      result = item;
+    }
+  }
+  return result;
+}
+
+
 //Test cases
 console.log("Sum of Positives");
 console.log(sumofPositives([1, -3, 5, -2, 9, -8])); //15
@@ -232,3 +249,7 @@ console.log(countOccurences(["apple", "banana", "apple", "orange", "banana", "ap
 console.log("Remove Duplicates");
 console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));
 // returns: [1, 2, 3, 4, 5])
+
+console.log("Most Frequent");
+console.log(mostFrequent([1, 2, 2, 3, 3, 3, 4]))// returns: 3)
+console.log(mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"]))// returns: "apple")
