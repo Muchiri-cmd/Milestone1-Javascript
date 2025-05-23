@@ -159,6 +159,17 @@ function countOccurences(array){
   }, {});
 }
 
+//Challenge 15: Remove Duplicates
+function removeDuplicates(arr){
+  let newArr = []
+  for (let i = 0; i < arr.length ; i++){
+    if (! newArr.includes( arr[i])){
+      newArr.push(arr[i])
+    }
+  }
+  return newArr;
+}
+
 //Test cases
 console.log("Sum of Positives");
 console.log(sumofPositives([1, -3, 5, -2, 9, -8])); //15
@@ -217,3 +228,7 @@ console.log(linearSearchAll([5, 3, 7, 1, 4], 10));    // returns: [])
 console.log("Count Occurences");
 console.log(countOccurences(["apple", "banana", "apple", "orange", "banana", "apple"]));
 // returns: { apple: 3, banana: 2, orange: 1 })
+
+console.log("Remove Duplicates");
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));
+// returns: [1, 2, 3, 4, 5])
